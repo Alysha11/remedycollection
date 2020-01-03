@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for remedy in remedies %}
+            {{remedy.type_name}}
+            {{remedy.remedy_name}}
+            {{remedy.remedy_uses}}
+            {{remedy.ingredients}}
+            {{remedy.how_to_use}}
+            {{remedy.scientific_backing}}
+            {{remedy.url_for_image}}
+            
+        {% endfor %}
+    </body>
+</html>
