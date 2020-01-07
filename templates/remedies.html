@@ -1,8 +1,6 @@
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
+      
         {% for remedy in remedies %}
             {{remedy.type_name}}
             {{remedy.remedy_name}}
@@ -12,6 +10,5 @@
             {{remedy.scientific_backing}}
             {{remedy.url_for_image}}
             
-        {% endfor %}
-    </body>
-</html>
+   {% endfor %}
+{% endblock %}
