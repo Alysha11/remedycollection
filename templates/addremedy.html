@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Add Remedy</h3>
+<div class="row">
+    <form action="" method="POST" class="col s12">
+    <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="remedy_name" name="remedy_name" type="text">
+                <label for="icon_prefix">Remedy Name</label>
+            </div>
+        </div>
+    <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="remedy_type" name="remedy_type" type="text">
+                <label for="icon_prefix">Type of Remedy</label>
+            </div>
+        </div>
+         <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">favorite</i>
+                <input id="uses" name="uses" type="text">
+                <label for="icon_prefix">Uses</label>
+            </div>
+        </div>
+    <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">local_grocery_store</i>
+                <input id="ingredients" name="ingredients" type="text">
+                <label for="icon_prefix">Ingredients(seperate each with a comma)</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">local_dining</i>
+                <textarea name="how_to_use" id="how_to_use" class="materialize-textarea"></textarea>
+                <label for="icon_telephone">How to Use</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="switch">
+                <label>
+                  <input id="science" name="science" type="checkbox">
+                  <span class="lever"></span>
+                  Is there scientific backing?
+                </label>
+            </div>
+        </div>
+         <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">image</i>
+                <input id="url_for_image" name="url_for_image" type="text">
+                <label for="icon_prefix">url_for_image</label>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -20,6 +20,11 @@ def get_remedies():
     return render_template("remedies.html", remedies=mongo.db.remedies.find())
 
 
+@app.route('/add_remedy')
+def add_remedy():
+    return render_template('addremedy.html')
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
