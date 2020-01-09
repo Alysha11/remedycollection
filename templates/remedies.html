@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-      
-        {% for remedy in remedies %}
-            {{remedy.type_name}}
-            {{remedy.remedy_name}}
-            {{remedy.remedy_uses}}
-            {{remedy.ingredients}}
-            {{remedy.how_to_use}}
-            {{remedy.scientific_backing}}
-            {{remedy.url_for_image}}
-            
-   {% endfor %}
+    <ul class="collapsible" data-collapsible="accordion">
+       {% for remedy in remedies %}
+        <li>
+            <div class="collapsible-header">
+
+                <div class=" task_header col s9">
+                    <i class="material-icons">expand_more</i><strong> {{remedy.remedy_name}}</strong> - <em>{{remedy.remedy_uses}}</em>
+                </div>
+            </div>
+            <div class="collapsible-body">
+            <h5>How do to use:</h5>
+                <span>
+                     {{remedy.how_to_use}}
+                </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 {% endblock %}
