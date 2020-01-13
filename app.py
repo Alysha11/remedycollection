@@ -22,7 +22,7 @@ def get_remedies():
 
 @app.route('/add_remedy')
 def add_remedy():
-    return render_template('addremedy.html')
+    return render_template('addremedy.html', types=mongo.db.type.find())
 
 
 if __name__ == '__main__':
